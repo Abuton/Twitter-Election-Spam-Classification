@@ -43,13 +43,12 @@ if __name__ == "__main__":
             print(screen_name)
             
     column_name = "ScreenName"
-    twitter_screen_name.extend(screen_name)
+    twitter_screen_name.append(screen_name)
             
-    with open('screenName.csv', 'w') as f:
+    with open('screenName.csv', 'w', newline='') as f:
       
         # using csv.writer method from CSV package
-        write = csv.writer(f)
+        write = csv.writer(f, quoting=csv.QUOTE_ALL)
 
-        write.writerow(column_name)
         write.writerows(twitter_screen_name)
 
