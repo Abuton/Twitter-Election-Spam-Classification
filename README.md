@@ -1,35 +1,11 @@
-# Twitter-Spam-Classification
-Here are the Spam words
-"#1" 	"$$$" 	"100%"
-"Act now "	"Action" 	"Additional income"
-Affordable 	All natural/new 	Amazed
-Apply now 	Avoid 	Be amazed/your own boss
-Beneficiary 	Billing 	Billion
-Bonus 	Boss 	Buy
-Call free/now 	Cancel 	Cash
-Casino 	Certified 	Cheap
-Click here 	Clearance 	Collect
-Compare rates 	Congratulations 	Credit card/check/offers
-Cures 	Deal 	Dear friend/somebody
-Debt 	Discount 	Direct email
-Dont delete/hesitate 	Double your income/cash 	Earn
-Extra 	Expire 	Fantastic
-Free access/money/gift 	Freedom 	Friend
-Get it now/started/paid 	Great 	Guarantee
-Hello 	Income 	Increase sales/traffic
-Instant 	Investment 	Junk
-Limited 	Lose 	Lowest price
-Luxury 	Make $/money 	Medicine
-Money 	Name 	No credit check/experience
-Now 	Obligation 	Offer
-Only 	Open 	Order now
-Please 	Presently 	Problem
-Promise 	Purchase 	Quote
-Rates 	Refinance 	Refund
-Remove 	Request 	Risk-free
-Sales 	Satisfaction 	Save
-Score 	Serious 	Spam
-Success 	Supplies 	Take action
-Terms 	Traffic 	Trial
-Unlimited 	Urgent 	Weight
-While supplies last 	Win 	Winner"
+## Twitter Spam Detection with a focus on Election
+
+Social networking sites have become very popular in recent years. Users  use  them  to  find  new  friends,  updates  their  existing  friends  with  their  latest  
+thoughts and activities. Among these sites, Twitter is the fastest growing site. Its popularity  also  attracts  many  spammers  to  infiltrate  legitimate  users’  accounts  with a large amount of spam messages. In this paper, we discuss some user-based and content-based features that are different between spammers and legitimate users.  Then,  we  use  these  features  to  facilitate  spam  detection.  Using  the  API  methods provided by Twitter, we crawled active Twitter users, their followers/following  information  and  their  most  recent  100  tweets.  Then,  we  evaluated  
+our detection scheme based on the suggested user and content-based features. Our results  show  that  among  the  four  classifiers  we  evaluated,  the  Random Forest  
+classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95.7%  precision and 95.7% F-measure using the Random Forest classifier.
+
+*File name definition*
+`src` : is a folder that contains all the utilities functions in python scripts that was used to preprocess the data as well as explore the data
+`notebooks` : contains ipynb files that explores the data and clean up the data
+`data` : is used to store some of the data that have been used.
