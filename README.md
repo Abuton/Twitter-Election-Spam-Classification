@@ -5,7 +5,10 @@ thoughts and activities. Among these sites, Twitter is the fastest growing site.
 our detection scheme based on the suggested user and content-based features. Our results  show  that  among  the  four  classifiers  we  evaluated,  the  Random Forest  
 classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95.7%  precision and 95.7% F-measure using the Random Forest classifier.
 
-*File name definition*
+## File name definition
+
 `src` : is a folder that contains all the utilities functions in python scripts that was used to preprocess the data as well as explore the data
+
 `notebooks` : contains ipynb files that explores the data and clean up the data
-`data` : is used to store some of the data that have been used.
+
+`data` : is used to store some of the data that have been used
