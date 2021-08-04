@@ -1,4 +1,4 @@
-## Twitter Spam Detection with a focus on Election
+# Twitter Spam Detection with a focus on Election
 
 Social networking sites have become very popular in recent years. Users  use  them  to  find  new  friends,  updates  their  existing  friends  with  their  latest  
 thoughts and activities. Among these sites, Twitter is the fastest growing site. Its popularity  also  attracts  many  spammers  to  infiltrate  legitimate  users’  accounts  with a large amount of spam messages. In this paper, we discuss some user-based and content-based features that are different between spammers and legitimate users.  Then,  we  use  these  features  to  facilitate  spam  detection.  Using  the  API  methods provided by Twitter, we crawled active Twitter users, their followers/following  information  and  their  most  recent  100  tweets.  Then,  we  evaluated  
