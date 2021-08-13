@@ -9,6 +9,27 @@ classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95
 
 `src` : is a folder that contains all the utilities functions in python scripts that was used to preprocess the data as well as explore the data
 
-`notebooks` : contains ipynb files that explores the data and clean up the data
+`notebooks` : contains ipynb files that explores the data and clean up the data and build the model
 
 `data` : is used to store some of the data that have been used
+
+`images` : contains the images that was generated during the modelling & Evaluation stage of the peoject
+
+`models` : contains models that was built for this project
+
+`src` :  contains the scripts files
+    - `account_checker.py` : for checking the autheticity of a twitter account
+    - `classifier_spam` : a python script to classify whether a tweet is spam or not
+    - `confusion_matrix` : to plot the confusion matrix of the model
+    - `data_extractor` : used to get data from twitter
+    - `modelling` : to build the models and visualize results
+    - `predict_account_type` : to predict different account type
+    - `screenNameCollector` : a script to collect screen Name from list of Twitter users
+
+## To Recreate this Project
+
+1. User needs to clone this repo and change directory to the newly created folder
+2. run `pip install -r requirements.txt`
+3. run `python src/modelling.py`
+
+Thanks
