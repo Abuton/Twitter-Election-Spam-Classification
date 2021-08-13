@@ -12,20 +12,16 @@ import chart_studio.plotly as py
 # Commented out IPython magic to ensure Python compatibility.
 import warnings
 warnings.filterwarnings('ignore')
-
-
-
 import re
 import string
 import numpy as np 
-import random
 import pandas as pd 
 import matplotlib.pyplot as plt
 import seaborn as sns
-# %matplotlib inline
 from plotly import graph_objs as go
 import plotly.express as px
 import plotly.figure_factory as ff
+import pickle
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
@@ -44,10 +40,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import nltk
 from nltk.corpus import stopwords
 
-import nltk
-from collections import Counter
-
-from sklearn.metrics import precision_score, recall_score, f1_score, classification_report,accuracy_score
+from sklearn.metrics import classification_report
 
 # Defining the global variables for the color schemes we will incorporate
 pblue = "#496595"
@@ -60,17 +53,17 @@ pbg = "#f4f0ea"
 pgreen = px.colors.qualitative.Plotly[2]
 
 # read the data
-df = pd.read_csv('election_data.csv')
+df = pd.read_csv('data/election_data.csv')
 
-df.info()
+print(df.info())
 
-df.isna().sum()
+print(f' missing values count {df.isna().sum()}')
 
 df.dropna(subset=['clean_text'], inplace=True)
 
 # Finding maximum length of text message
 
-print(np.max(df['clean_text'].apply(lambda x: len(x.split())).values))
+print('logest text length', np.max(df['clean_text'].apply(lambda x: len(x.split())).values))
 
 """### Exploratory Data Analysis"""
 
@@ -216,7 +209,7 @@ We will use two major approaches here
 x = df['clean_text']
 y = df['label_num']
 
-len(x), len(y)
+print(len(x), len(y))
 
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, random_state=201)
@@ -268,9 +261,6 @@ The CountVectorizer model can be tuned in a variety of ways:
 
 """
 
-# Example of a tuned model
-count_tuned = CountVectorizer(stop_words='english', ngram_range=(1,2), min_df=0.1, max_df=0.7, max_features=130)
-
 # Working with TF-IDF now
 from sklearn.feature_extraction.text import TfidfTransformer
 # We are using transformer here
@@ -279,8 +269,6 @@ tfidf = TfidfTransformer()
 
 tfidf.fit(X_train_resample)
 x_train_tfidf = tfidf.transform(X_train_resample)
-
-x_train_tfidf
 
 # We will be creating seaborn and plotly confusion matrices
 
@@ -399,7 +387,7 @@ def make_confusion_matrix(cf,
     if title:
         plt.title(title)
 
-from sklearn.metrics import confusion_matrix, roc_auc_score, roc_curve
+from sklearn.metrics import confusion_matrix, roc_curve
 categories=['Safe', 'Spam']
 
 def seaborn_conf(y, ypred):
