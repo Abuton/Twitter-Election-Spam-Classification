@@ -28,6 +28,8 @@ classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95
 
 ## To Recreate this Project
 
+User Needs a Python Environment installed on local Machine
+
 1. User needs to clone this repo and change directory to the newly created folder
 2. run `pip install -r requirements.txt`
 3. run `python src/modelling.py`
