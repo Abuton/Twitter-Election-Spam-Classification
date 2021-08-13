@@ -18,6 +18,7 @@ classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95
 `models` : contains models that was built for this project
 
 `src` :  contains the scripts files
+
     - `account_checker.py` : for checking the autheticity of a twitter account
     - `classifier_spam` : a python script to classify whether a tweet is spam or not
     - `confusion_matrix` : to plot the confusion matrix of the model
