@@ -239,6 +239,7 @@ def plot_resampling(X, y, sampler, ax, title=None):
 count = CountVectorizer(stop_words='english', ngram_range=(1,2))
 count.fit(x)
 
+
 x_train_num = count.transform(x_train)
 x_test_num = count.transform(x_test)
 
@@ -471,6 +472,9 @@ pipe = Pipeline([
 
 pipe.fit(x_train, y_train)
 yp_class_test = pipe.predict(x_test)
+
+pickle.dump(pipe, open('model_pipeline.pkl', 'wb'))
+
 yp_class_train = pipe.predict(x_train)
 yp_prob = pipe.predict_proba(x_test)[:,1]
 
