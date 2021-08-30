@@ -1,5 +1,7 @@
 # Twitter Spam Detection with a focus on Election
 
+![Architecture Workflow](image/architecture_workflow.png "Architecture Workflow")
+
 Social networking sites have become very popular in recent years. Users  use  them  to  find  new  friends,  updates  their  existing  friends  with  their  latest  
 thoughts and activities. Among these sites, Twitter is the fastest growing site. Its popularity  also  attracts  many  spammers  to  infiltrate  legitimate  users’  accounts  with a large amount of spam messages. In this paper, we discuss some user-based and content-based features that are different between spammers and legitimate users.  Then,  we  use  these  features  to  facilitate  spam  detection.  Using  the  API  methods provided by Twitter, we crawled active Twitter users, their followers/following  information  and  their  most  recent  100  tweets.  Then,  we  evaluated  
 our detection scheme based on the suggested user and content-based features. Our results  show  that  among  the  four  classifiers  we  evaluated,  the  Random Forest  
@@ -28,8 +30,6 @@ classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95
     - `screenNameCollector` : a script to collect screen Name from list of Twitter users
 
 ## To Recreate this Project
-
-User Needs a Python Environment installed on local Machine
 
 1. User needs to clone this repo and change directory to the newly created folder
 2. run `pip install -r requirements.txt`
