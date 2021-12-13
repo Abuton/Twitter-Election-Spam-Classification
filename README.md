@@ -35,4 +35,4 @@ classifier  produces  the  best  results.  Our  spam  detector  can  achieve  95
 2. run `pip install -r requirements.txt`
 3. run `python src/modelling.py`
 
-Thanks
+Thanks and Enjoy
